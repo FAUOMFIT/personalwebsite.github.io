@@ -1,0 +1,74 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color:rgb(221, 19, 137) ;
+    color: white;
+  }
+body{
+    background-image:url("maliyadeva.JPG") ;
+    background-repeat: no-repeat;
+    height: 100%; 
+    background-size: cover;
+            
+
+} 
+img{
+    opacity:0.2;
+}
+p,ul{
+    font: 25px bold;
+    color:white;
+    text-align: center;
+    }
+
+    .head{
+        background-image: linear-gradient(to bottom right, rgb(37, 12, 177),rgb(221, 19, 137));
+        width:100%;
+        height: 400px;
+    
+    }
+                   
+    .head-flex{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        row-gap:20px;
+        left:30%;
+        top: 30%;
+        right:30%;
+        
+    } 
+    
+    .head-flex h1{
+        color:#fff;
+    font-size: 35px;
+    font-family: "Nunito",sans-serif;
+    font-weight: lighter;
+    
+    
+    }
+    .head-flex h2{
+    color:#fff;
+    font-size: 25px;
+    font-family: "Nunito",sans-serif;
+    font-weight: lighter;
+    margin-top: -50px; 
+    }

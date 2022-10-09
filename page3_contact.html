@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="page3_contactcss.css">
+        <title>
+            Contact Me
+        </title>
+    </head>
+    <body>
+
+
+      <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+        import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js";
+
+       
+        const firebaseConfig = {
+          apiKey: "AIzaSyAc4Y-8IQ6yaMK9HZ_BOVejPsoxPpfi9tk",
+          authDomain: "personal-51c8b.firebaseapp.com",
+          databaseURL: "https://personal-51c8b-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "personal-51c8b",
+          storageBucket: "personal-51c8b.appspot.com",
+          messagingSenderId: "271322125358",
+          appId: "1:271322125358:web:fdbf7f76f6eb5df4ec7bbf"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+       
+        document.getElementById("userform").addEventListener("send", function(e){
+            e.preventDefault();
+           let name = document.getElementById("name").value;
+           let email = document.getElementById("email").value;
+           let subject= document.getElementById("subject").value;
+           let message= document.getElementById("message").value;
+          
+         
+           set(ref(db, 'users/' + name), {
+                    
+                     email: email,
+                     subject:subject,
+                     message:message,
+ 
+           });
+          });
+   
+      </script>
+
+
+
+
+      <div class="topnav">
+        <a  href="homepg.html">Home</a>
+        <a href="Education.html">Education</a>
+        <a href="hobby.html">Hobby</a>
+        <a class="active" href="page3_contact.html">Contact</a>
+      </div>
+            <div class="head">
+               <div class="head-flex">
+       
+                <h1>CONTACT ME </h1>
+                
+
+               </div> 
+            </div>
+
+
+        <div class="grid-container">
+            
+            <div class="item1">
+                <img src="mail2.png.jpg" alt="mail" class="image"><br>
+              <div class="imgtxt">
+                          <h4 class="topic">My Email <h4>
+                          <p> fathimaakram8@gmail.com</p>
+              </div>
+
+            </div>   
+            
+
+
+            <div class="item2">
+                <img src="insta.png" alt="Instagram" class="image"><br>
+              <div class="imgtxt">
+                          <h4 class="topic">Instagram<h4>
+                          <p>Fathi_akr</p>
+              </div>
+
+            </div>
+
+
+            
+            <div class="item3">
+                <img src="whatsapp.png" alt="whatsapp" class="image"><br>
+              <div class="imgtxt">
+                          <h4 class="topic">Whatsapp<h4>
+                          <p>+94771178125</p>
+              </div>
+            </div>  
+            
+            <div class="item4">
+
+                          <h4 class="topic">Send a message </h4>
+                          <p class="a_grid">Please fill in the below fields </p><br>
+                <form method="post" id="userform">
+                  <div class="grid_4">
+                    <label for="name">Your Name</label><br><br>
+                    <input type="text" id="name" size="40"><br><br><br>
+        
+                    <label for="mail">Email</label><br><br>
+                    <input type="text" id="mail" size="40"><br><br><br>
+        
+                   
+                    <label for="subject">Subject</label><br><br>
+                    <input type="text" id="subject"  size="40"><br><br><br>
+        
+                    <label for="message">Message</label><br><br>
+                    <input type="text" id="message" size="40"><br><br><br><br><br><br>
+                  
+                  </div>  
+        
+                    
+                    
+                    <button class="send" value="send">SEND</button>
+        
+                </form>  
+                   
+                
+            </div>
+
+        </div>    
+    
+    </body>
+</html>            
